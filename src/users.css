@@ -1,0 +1,28 @@
+.usersList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem 1rem;
+  background-color: azure;
+}
+.Info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem 1rem;
+  background-color: rgb(21, 84, 167);
+}
+.id {
+  flex: 1;
+}
+.name {
+  flex: 3;
+}
+.type {
+  flex: 3;
+}
+.node {
+  flex: 3;
+}
