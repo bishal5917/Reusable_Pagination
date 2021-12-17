@@ -26,3 +26,15 @@
 .node {
   flex: 3;
 }
+.Nums{
+  display: flex;
+  margin: 1rem;
+  padding: 1rem 1rem;
+}
+.Nums>*{
+  margin: 0.3rem;
+  background-color: teal;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  border-radius: 7px;
+}

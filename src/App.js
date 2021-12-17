@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { users } from './dummydata'
 import './App.css';
 import './users.css'
 import Users from './Users';
+import Pagination from './Pagination';
 
 function App() {
 
   const [currentpage, setCurrentPage] = useState(1)
   const [itemperpage, setItemPerPage] = useState(5)
 
+
   //some indexes
   const lastitemindex = currentpage * itemperpage
   const firstitemindex = lastitemindex - itemperpage
   const currentitem = users.slice(firstitemindex, lastitemindex)
   //currentitem will have items between first and last index
+
+  //length of our users array
+  //console.log(users.length) 
 
   return (
     <>
@@ -33,6 +38,10 @@ function App() {
           />
         ))
       }
+      <div className="Nums">
+        <Pagination itemperpage={itemperpage} totalitems={users.length} />
+      </div>
+
     </>
   );
 }
