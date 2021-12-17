@@ -6,6 +6,14 @@ import Users from './Users';
 
 function App() {
 
+  const [currentpage, setCurrentPage] = useState(1)
+  const [itemperpage, setItemPerPage] = useState(5)
+
+  //some indexes
+  const lastitemindex = currentpage * itemperpage
+  const firstitemindex = lastitemindex - itemperpage
+  const currentitem = users.slice(firstitemindex, lastitemindex)
+  //currentitem will have items between first and last index
 
   return (
     <>
@@ -16,7 +24,7 @@ function App() {
         <span className="node">NODE_ID</span>
       </div>
       {
-        users.map((user) => (
+        currentitem.map((user) => (
           <Users key={user.node_id}
             idd={user.id}
             name={user.login}
