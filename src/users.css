@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem;
   padding: 1rem 1rem;
   background-color: azure;
 }
@@ -10,9 +10,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem;
   padding: 1rem 1rem;
-  background-color: rgb(21, 84, 167);
+  color: teal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: whitesmoke;
 }
 .id {
   flex: 1;
@@ -26,15 +29,18 @@
 .node {
   flex: 3;
 }
-.Nums{
+.Nums {
   display: flex;
   margin: 1rem;
   padding: 1rem 1rem;
 }
-.Nums>*{
+.Nums > * {
   margin: 0.3rem;
-  background-color: teal;
+  background-color: whitesmoke;
+  color: teal;
   padding: 0.5rem 0.5rem;
   cursor: pointer;
   border-radius: 7px;
+  font-weight: bold;
+  font-size: 1.2rem;
 }

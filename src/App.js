@@ -8,7 +8,7 @@ import Pagination from './Pagination';
 function App() {
 
   const [currentpage, setCurrentPage] = useState(1)
-  const itemperpage = 5
+  const itemperpage = 6
 
   //some indexes
   const lastitemindex = currentpage * itemperpage
