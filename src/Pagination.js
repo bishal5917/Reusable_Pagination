@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Pagination({ itemperpage, totalitems }) {
+export default function Pagination({ itemperpage, totalitems ,paginate}) {
     const itemarray = []
 
     for (let i = 1; i <= Math.ceil(totalitems / itemperpage); i++) {
@@ -10,7 +10,8 @@ export default function Pagination({ itemperpage, totalitems }) {
         <>
             {
                 itemarray.map(nums => (
-                    <span key={nums}>{nums}</span>
+                    <span onClick={() => paginate(nums)}
+                        key={nums}>{nums}</span>
                 ))
             }
         </>

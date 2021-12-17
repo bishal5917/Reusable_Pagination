@@ -8,8 +8,7 @@ import Pagination from './Pagination';
 function App() {
 
   const [currentpage, setCurrentPage] = useState(1)
-  const [itemperpage, setItemPerPage] = useState(5)
-
+  const itemperpage = 5
 
   //some indexes
   const lastitemindex = currentpage * itemperpage
@@ -19,6 +18,11 @@ function App() {
 
   //length of our users array
   //console.log(users.length) 
+
+  //getting nums from paginate as it is called there
+  const paginate = (nums) => {
+    setCurrentPage(nums)
+  }
 
   return (
     <>
@@ -39,7 +43,11 @@ function App() {
         ))
       }
       <div className="Nums">
-        <Pagination itemperpage={itemperpage} totalitems={users.length} />
+        <Pagination
+          itemperpage={itemperpage}
+          totalitems={users.length}
+          paginate={paginate}
+        />
       </div>
 
     </>
